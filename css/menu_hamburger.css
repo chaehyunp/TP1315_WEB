@@ -2,25 +2,36 @@ input[id="icon"] {
     display:none;
 } 
 
-body{
+/* body{
     height:5000px;
+} */
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logotype {
+    display: block;
+    margin: auto 0;
 }
 
 input[id="icon"] + label{
     position: relative;
     display:block;
-    width:40px;
-    height:1.5rem;
-    cursor:pointer;  /* 커서를 올려놓을 때 모양이 바뀐다. */
+    width:36px;
+    height:1rem;
+    cursor:pointer;  /* 커서를 올려놓을 때 모양 */
 } 
 
 input[id="icon"] + label > span {
     position: absolute;
     display:block;
-    width:80%;
-    height:3px;
-    background:#7E00B9;
-    transition: all 0.35s;  /* 진행되는 과정들을 천천히 보여줄 수 있다. 0.35초 동안 진행됨 */
+    width:60%;
+    height:0.1rem;
+    background:#252525;
+    transition: all 0.35s;  /* 진행 과정 천천히 0.35초 동안 */
     z-index:2;
 
 }
@@ -31,7 +42,8 @@ input[id="icon"] + label > span:nth-child(1) {
 
 input[id="icon"] + label > span:nth-child(2) {
     top:50%;
-    transform: translateY(-50%);  /* 엘리먼트를 변형할 때 쓴다. 비틀거나 구부리거나 돌릴 때 . 여러가지로 모양을 바꿀 때 */
+    opacity: 0%;
+    /* transform: translateY(-50%);  엘리먼트를 변형할 때 쓴다. 비틀거나 구부리거나 돌릴 때 . 여러가지로 모양을 바꿀 때 */
 }
 
 input[id="icon"] + label > span:nth-child(3) {
@@ -45,7 +57,7 @@ input[id="icon"]:checked + label > span:nth-child(1) {
 }
 
 input[id="icon"]:checked + label > span:nth-child(2) {
-    opacity: 0;
+    opacity: 0%;
 }
 
 input[id="icon"]:checked + label > span:nth-child(3) {
@@ -53,24 +65,40 @@ input[id="icon"]:checked + label > span:nth-child(3) {
     transform:translateY(50%) rotate(-45deg);
 }
 
-#icon + label + #header {
-    position:fixed;  /* 스크롤을 내리더라도 같은 위치에서 붙어다닌다. */
+
+/* navbox 열리면 어둡게 */
+.open {
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    z-index : 100;
+}
+
+.close {
+    box-shadow : rgba(255, 255, 255, 0) 0 0 0 9999px;
+    z-index : 100;
+}
+
+#icon + label + #navbox {
+    position:fixed;  /* 스크롤을 내리더라도 같은 위치에서 붙어다니도록 */
     width:300px;
     height:100%;
-    background:#333;
+    background:white;
     top:0px;
     padding:60px 25px 25px 25px;
     box-sizing:border-box;
-    left:-300px;
+    right:-300px;
     z-index:1;
     transition: all 0.35s;
 }
 
-#icon:checked + label + #header {
-    left:0px;
+#icon:checked + label + #navbox {
+    right:0px;
 }
 
-#icon:checked + label + #header > ul > li > a {
-    color: ;
+#icon:checked + label + #navbox > ul > li > a {
+    color: #252525;
+}
 
+li {
+    font-size: 0.9rem;
+    margin: 3rem;
 }
