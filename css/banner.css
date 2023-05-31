@@ -15,13 +15,13 @@
 .box {
     height: max-content;
     text-align: left;
-    padding-left: 10%;
 }
 
 .text {
     font-size: 1.7rem;
     font-family: 'pretendard_bold';
     margin-bottom: 60px;
+    padding-left: 2rem;
 }
 
 .sub {

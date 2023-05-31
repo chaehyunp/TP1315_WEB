@@ -1,0 +1,34 @@
+.title {
+    font-size: 1.2rem;
+    font-family: 'pretendard_bold';
+    margin: 0 0 2rem 2rem; 
+}
+
+
+hr {
+    margin: 0.7rem 0;
+}
+
+
+li {
+    list-style-type: none;
+    margin: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 데스크탑일때 사이즈 조절*/
+@media screen and (min-width: 1024px) {
+    #wrapper {
+    width: 70%;
+    margin: 1rem auto 2rem auto;
+    
+    }
+
+    li {
+        margin: 1.2rem 1rem; 
+    }
+}
+
+
