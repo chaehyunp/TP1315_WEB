@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>map</title>
 </head>
 <body>
+
+	<header>
+        <div id="container">
+          <a href="#"><img id="logotype" src="./image/logo/logotype_blk.png" alt=""></a>
+          
+          <input type="checkbox" id="icon">
+          <label for="icon" id="hamburger">  <!--label은 인라인 스타일-->
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+  
+          <div id="navbox">
+            <ul>
+                <li><a href="home.html">HOME.</a></li>
+                <li><a href="tip.html">WINE?</a></li>
+                <li><a href="menu.html">MENU+</a></li>
+                <li><a href="map.html">MAP#</a></li>
+                <li><a href="help.html">HELP!</a></li>
+            </ul>
+        </div>   
+        </div>
+    </header>
+
 	<div id="map" style="width:500px;height:400px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c07421e1a1a1041f1c6892de0a3ee21d"></script>
 	<script>
@@ -19,4 +43,11 @@
 		var map = new kakao.maps.Map(container, options);
 	</script>
 </body>
+
+<!-- 기본 패딩 및 폰트 사이즈 초기화 -->
+<link rel="stylesheet" href="./css/init.css">
+
+<!-- 햄버거 메뉴 -->
+<link rel="stylesheet" href="./css/menu_hamburger.css">
+<script src="./js/menu_hamburger.js"></script>
 </html>
