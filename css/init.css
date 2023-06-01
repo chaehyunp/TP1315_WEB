@@ -14,6 +14,11 @@ ul{
 }
 
 
+/* 로고 사이즈 조정 */
+#logotype {
+    width: 5rem;
+}
+
 /* 폰트설정 */
 @font-face {
     font-family: 'pretendard_regular';

@@ -18,6 +18,10 @@ li {
     justify-content: space-between;
 }
 
+li>img {
+    width: 1.5rem;
+}
+
 /* 데스크탑일때 사이즈 조절*/
 @media screen and (min-width: 1024px) {
     #wrapper {
