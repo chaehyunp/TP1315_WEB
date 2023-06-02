@@ -37,3 +37,8 @@ ul li {
     margin: 3rem 0;
     line-height: 1.6rem;
 }
+
+div>img {
+    height: 1000px;
+    margin: 3rem 0 0 0;
+}
