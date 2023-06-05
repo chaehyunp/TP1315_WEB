@@ -20,7 +20,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   
     display: block;
   
@@ -55,15 +55,20 @@
     color: #8e8e8e;
 }
 
-.name {
+article p {
     width: 10rem;
-    padding: 1rem 0 ;
+    padding: 0.5rem 0 0 0;
     font-family: 'pretendard_regular';
     font-size: 0.9rem;
     white-space : nowrap; /* 줄바꿈방지 */
     overflow : hidden; /* 글 넘어가면 숨기기 */
     text-overflow: ellipsis; /* 글 넘어가면 말줄임표 */
 }
+
+.info {
+    color: gray; font-size: 0.7rem;
+}
+
 
 .price {
     font-family: 'pretendard_bold';
@@ -75,7 +80,7 @@
     width: 10rem;
     height: 10rem;
     border-radius: 0.2em;
-    padding-bottom: 70%;
+    margin-bottom: 0.5rem;
     background-size: cover;
     background-position: center center;
 }
