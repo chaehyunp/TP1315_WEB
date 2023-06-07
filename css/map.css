@@ -1,0 +1,14 @@
+.map_wrap {
+    width: 90%;
+    margin: 1rem auto 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 데스크탑일때 사이즈 조절*/
+@media screen and (min-width: 1024px) {
+    .map_wrap {
+        width: 70%;
+    }
+}

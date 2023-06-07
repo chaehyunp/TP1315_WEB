@@ -5,12 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>help</title>
+        
+    
+    
 </head>
 <body>
 
+    <!-- 기본 패딩 및 폰트 사이즈 초기화 -->
+    <link rel="stylesheet" href="./css/init.css">
+
+    <!-- 햄버거 메뉴 -->
+    <!-- <link rel="stylesheet" href="./css/menu_hamburger.css"> -->
+    <style>
+                
+        input[id="icon"] {
+            display:none;
+        } 
+
+        /* body{
+            height:5000px;
+        } */
+
+        #container {
+            width: 90%;
+            margin: 1rem auto 1.5rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logotype {
+            display: block;
+            margin: auto 0;
+        }
+
+        input[id="icon"] + label{
+            position: relative;
+            display:block;
+            width:18px;
+            height:10px;
+            cursor:pointer;  /* 커서를 올려놓을 때 모양 */
+        } 
+
+        input[id="icon"] + label > span {
+            position: absolute;
+            display:block;
+            width:100%;
+            height:2px;
+            background:#252525;
+            transition: all 0.35s;  /* 진행 과정 천천히 0.35초 동안 */
+            z-index:2;
+
+        }
+
+        input[id="icon"] + label > span:nth-child(1) {
+            top:0px;
+        }
+
+        /* input[id="icon"] + label > span:nth-child(2) {
+            top:50%;
+            opacity: 0%;
+            transform: translateY(-50%);  엘리먼트를 변형할 때 쓴다. 비틀거나 구부리거나 돌릴 때 . 여러가지로 모양을 바꿀 때
+        } */
+
+        input[id="icon"] + label > span:nth-child(3) {
+            bottom:0px;
+        }
+
+
+        input[id="icon"]:checked + label > span:nth-child(1) {
+            top:50%;
+            transform:translateY(-50%) rotate(45deg);
+        }
+
+        input[id="icon"]:checked + label > span:nth-child(2) {
+            opacity: 0%;
+        }
+
+        input[id="icon"]:checked + label > span:nth-child(3) {
+            bottom:50%;
+            transform:translateY(50%) rotate(-45deg);
+        }
+
+
+        /* navbox 열리면 어둡게 */
+        .open {
+            box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+            z-index : 100;
+        }
+
+        .close {
+            box-shadow : rgba(255, 255, 255, 0) 0 0 0 9999px;
+            z-index : 100;
+        }
+
+        #icon + label + #navbox {
+            position:fixed;  /* 스크롤을 내리더라도 같은 위치에서 붙어다니도록 */
+            width:300px;
+            height:100%;
+            background:white;
+            top:0px;
+            padding:60px 25px 25px 25px;
+            box-sizing:border-box;
+            right:-300px;
+            z-index:1;
+            transition: all 0.35s;
+        }
+
+        #icon:checked + label + #navbox {
+            right:0px;
+        }
+
+        #icon:checked + label + #navbox > ul > li > a {
+            color: #252525;
+        }
+
+        li {
+            font-size: 0.9rem;
+            margin: 3rem 0 0 2rem;
+        }
+
+        /* 데스크탑일때 사이즈 조절*/
+        @media screen and (min-width: 1024px) {
+            #container {
+                width: 70%;
+            }
+        }
+
+    </style>
+    <script src="./js/menu_hamburger.js"></script>
+
+    <!-- 리스트 형태 -->
+    <link rel="stylesheet" href="./css/list.css">
+
     <header>
         <div id="container">
-          <a href="#"><img id="logotype" src="./image/logo/logotype_blk.png" alt=""></a>
+          <a href="http://testhue96.dothome.co.kr/1315/index.html"><img id="logotype" src="./image/logo/logotype_blk.png" alt=""></a>
           
           <input type="checkbox" id="icon">
           <label for="icon" id="hamburger">  <!--label은 인라인 스타일-->
@@ -21,11 +151,11 @@
   
           <div id="navbox">
             <ul>
-                <li><a href="index.html">HOME.</a></li>
-                <li><a href="tip.html">WINE?</a></li>
-                <li><a href="menu.html">MENU+</a></li>
-                <li><a href="map.html">MAP#</a></li>
-                <li><a href="help.html">HELP!</a></li>
+                <li><a href="http://testhue96.dothome.co.kr/1315/index.html">HOME.</a></li>
+                <li><a href="http://testhue96.dothome.co.kr/1315/tip.html">WINE?</a></li>
+                <li><a href="http://testhue96.dothome.co.kr/1315/menu.html">MENU+</a></li>
+                <li><a href="http://testhue96.dothome.co.kr/1315/map.html">MAP#</a></li>
+                <li><a href="http://testhue96.dothome.co.kr/1315/help.html">HELP!</a></li>
             </ul>
         </div>   
         </div>
@@ -39,17 +169,9 @@
             <li>고객센터<img src="./image/icon/icon_expand_more.png" alt=""></li><hr>
         </ul>
     </article>
-    
+
+
 </body>
 
-<!-- 기본 패딩 및 폰트 사이즈 초기화 -->
-<link rel="stylesheet" href="./css/init.css">
-
-<!-- 햄버거 메뉴 -->
-<link rel="stylesheet" href="./css/menu_hamburger.css">
-<script src="./js/menu_hamburger.js"></script>
-
-<!-- 리스트 형태 -->
-<link rel="stylesheet" href="./css/list.css">
 
 </html>
