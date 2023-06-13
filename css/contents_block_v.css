@@ -72,3 +72,13 @@
     flex: 1;
     line-height: 1.4;
 }
+
+/* 데스크탑일때 사이즈 조절*/
+@media screen and (min-width: 1024px) {
+    .titlebox{
+        width: 70%;
+    }
+    .container {
+        width: 70%;
+    }
+}
