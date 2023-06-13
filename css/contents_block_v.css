@@ -1,7 +1,7 @@
 /* 콘텐츠 블럭 타이틀 */
 .titlebox {
     width: 90%;
-    max-width: 1240px;
+
     margin: 0 auto;
 }
 
@@ -16,7 +16,7 @@
 /* 콘텐츠 블럭 */
 .container {
     width: 90%;
-    max-width: 1240px;
+
     margin: 0 auto;
   
     display: grid;
